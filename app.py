@@ -16,7 +16,7 @@ if not st.secrets["gemini"]["GOOGLE_API_KEY"]:
 # Gemini 모델 초기화
 try:
     genai.configure(api_key=st.secrets["gemini"]["GOOGLE_API_KEY"])
-    model = genai.GenerativeModel('gemini-pro')
+    model = genai.GenerativeModel('gemini-1.5-pro')
 except Exception as e:
     st.error(f"🚨 Gemini API 초기화 중 오류가 발생했습니다: {str(e)}")
     st.stop()
